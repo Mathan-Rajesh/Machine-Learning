@@ -1,196 +1,194 @@
-# Customer Churn Prediction using Machine Learning
+# 🏦 Customer Churn Prediction using Machine Learning
 
-## 📌 Project Overview
-This project aims to predict whether a bank customer will leave the bank (churn) or continue using its services based on customer information such as credit score, age, balance, number of products, and account activity.
-
-Machine Learning classification algorithms are used to build a predictive model that helps banks identify customers who are likely to leave, enabling them to improve customer retention strategies.
+![Python](https://img.shields.io/badge/Python-3.11-blue?style=for-the-badge&logo=python)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-ML-orange?style=for-the-badge&logo=scikitlearn)
+![Status](https://img.shields.io/badge/Project-Completed-brightgreen?style=for-the-badge)
 
 ---
 
-## 📂 Dataset Information
+# 📌 Project Overview
 
-**Dataset Name:** Customer Churn Prediction Dataset
+This project predicts whether a customer will leave the bank (**Churn = 1**) or remain with the bank (**Churn = 0**) using Machine Learning.
 
-### Features
+The model is trained using customer information such as credit score, balance, age, salary, country, and account activity.
 
-| Column | Description |
+---
+
+# 🎯 Objective
+
+✔ Predict Customer Churn
+
+✔ Improve Customer Retention
+
+✔ Compare Customer Behaviour
+
+✔ Build an Accurate ML Classification Model
+
+---
+
+# 📂 Dataset
+
+| Feature | Description |
 |---------|-------------|
-| customer_id | Unique customer ID |
-| credit_score | Customer's credit score |
-| country | Customer's country |
-| gender | Male/Female |
-| age | Customer's age |
-| tenure | Years with the bank |
-| balance | Bank account balance |
-| products_number | Number of bank products used |
-| credit_card | Has credit card (1 = Yes, 0 = No) |
-| active_member | Active member (1 = Yes, 0 = No) |
-| estimated_salary | Estimated yearly salary |
-| churn | Target variable (1 = Customer leaves, 0 = Customer stays) |
+| Credit Score | Customer Credit Score |
+| Country | France / Germany / Spain |
+| Gender | Male / Female |
+| Age | Customer Age |
+| Tenure | Years with Bank |
+| Balance | Account Balance |
+| Products Number | Number of Products |
+| Credit Card | Yes / No |
+| Active Member | Yes / No |
+| Estimated Salary | Annual Salary |
+| **Churn** | Target Variable |
 
 ---
 
-## 🎯 Objective
+# ⚙️ Machine Learning Workflow
 
-Develop a Machine Learning model that predicts whether a customer will churn based on historical customer data.
-
----
-
-## 🛠 Technologies Used
-
-- Python
-- NumPy
-- Pandas
-- Scikit-learn
-- Matplotlib
-- Seaborn
-- Jupyter Notebook
-
----
-
-## 📋 Machine Learning Workflow
-
-### Step 1
-Import required libraries.
-
-### Step 2
-Load the dataset.
-
-### Step 3
-Perform Exploratory Data Analysis (EDA).
-
-- Check dataset information
-- Check missing values
-- View summary statistics
-
-### Step 4
+```text
+Dataset
+   │
+   ▼
 Data Preprocessing
-
-- Remove unnecessary columns
-- Encode categorical variables
-- Feature scaling
-
-### Step 5
-Split the dataset
-
-- Training Set (80%)
-- Testing Set (20%)
-
-### Step 6
-Train the Machine Learning model
-
-Algorithm Used:
-
-- Random Forest Classifier
-
-### Step 7
-Predict customer churn.
-
-### Step 8
-Evaluate model performance.
+   │
+   ▼
+Label Encoding
+   │
+   ▼
+Feature Scaling
+   │
+   ▼
+Train-Test Split
+   │
+   ▼
+Random Forest Model
+   │
+   ▼
+Prediction
+   │
+   ▼
+Model Evaluation
+```
 
 ---
 
-## 📊 Evaluation Metrics
+# 🛠 Technologies Used
 
-- Accuracy Score
-- Confusion Matrix
-- Classification Report
-- Precision
-- Recall
-- F1-Score
-
----
-
-## 📈 Feature Importance
-
-The Random Forest model identifies the most influential features affecting customer churn, such as:
-
-- Age
-- Balance
-- Credit Score
-- Active Member
-- Number of Products
-- Estimated Salary
+| Tool | Purpose |
+|------|---------|
+| 🐍 Python | Programming Language |
+| 📊 Pandas | Data Analysis |
+| 🔢 NumPy | Numerical Computing |
+| 🤖 Scikit-Learn | Machine Learning |
+| 📈 Matplotlib | Visualization |
+| 📉 Seaborn | Graphs |
 
 ---
 
-## 📁 Project Structure
+# 📊 Model Used
+
+✅ Random Forest Classifier
+
+---
+
+# 📈 Evaluation Metrics
+
+- ✅ Accuracy Score
+- ✅ Precision
+- ✅ Recall
+- ✅ F1-Score
+- ✅ Confusion Matrix
+- ✅ Classification Report
+
+---
+
+# 📊 Expected Accuracy
+
+| Algorithm | Accuracy |
+|------------|----------|
+| Logistic Regression | 80% |
+| Decision Tree | 82% |
+| **Random Forest** | **86%** |
+
+---
+
+# 📁 Project Structure
 
 ```
-Customer-Churn-Prediction/
+Customer-Churn-Prediction
 │
 ├── Churn_Modelling.csv
 ├── Customer_Churn_Prediction.ipynb
 ├── README.md
-└── requirements.txt
+├── requirements.txt
+└── images
 ```
 
 ---
 
-## ▶️ How to Run
-
-1. Download the dataset.
-2. Open the Jupyter Notebook.
-3. Install the required libraries.
+# ▶️ Installation
 
 ```bash
-pip install pandas numpy scikit-learn matplotlib seaborn
+git clone https://github.com/yourusername/Customer-Churn-Prediction.git
 ```
 
-4. Run all notebook cells.
-5. View the model accuracy and evaluation metrics.
+Install Packages
+
+```bash
+pip install pandas numpy matplotlib seaborn scikit-learn
+```
+
+Run Notebook
+
+```bash
+jupyter notebook
+```
 
 ---
 
-## 📌 Model Used
+# 📷 Output
 
-**Random Forest Classifier**
+## Confusion Matrix
 
-Random Forest is an ensemble learning algorithm that combines multiple decision trees to improve prediction accuracy and reduce overfitting.
-
----
-
-## 🎯 Expected Output
-
-- Predict whether a customer will churn.
-- Display prediction accuracy.
-- Generate confusion matrix.
-- Display classification report.
-- Show feature importance.
+<img src="images/confusion_matrix.png" width="600">
 
 ---
 
-## 📊 Expected Accuracy
+## Feature Importance
 
-| Model | Accuracy |
-|---------|----------|
-| Logistic Regression | 80–82% |
-| Decision Tree | 79–84% |
-| Random Forest | 84–88% |
-| Gradient Boosting | 85–89% |
+<img src="images/feature_importance.png" width="700">
 
 ---
 
-## 🚀 Future Enhancements
+## Accuracy
 
-- Hyperparameter tuning using GridSearchCV
-- Deploy the model using Flask or Streamlit
-- Compare with XGBoost and LightGBM
-- Build an interactive dashboard for predictions
+```
+Accuracy : 86%
+```
 
 ---
 
-## 👩‍💻 Author
+# 🚀 Future Scope
+
+- Hyperparameter Tuning
+- XGBoost
+- LightGBM
+- Streamlit Deployment
+- Flask API
+
+---
+
+# 👩‍💻 Author
 
 **Mathan R**
 
-BCA – Kamaraj College
+🎓 BCA Student
 
-Year of Passing: 2027
+🏫 Kamaraj College
+
+📅 Year of Passing: 2027
 
 ---
 
-## 📄 License
-
-This project is developed for educational and academic purposes.
+# ⭐ If you like this project, don't forget to Star the repository.
